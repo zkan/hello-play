@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/zkan/Labs/hello-play/play-samples-play-scala-hello-world-tutorial/conf/routes
-// @DATE:Sun Dec 27 20:42:56 ICT 2020
+// @DATE:Sun Dec 27 20:48:04 ICT 2020
 
 package controllers;
 

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/zkan/Labs/hello-play/play-samples-play-scala-hello-world-tutorial/conf/routes
-// @DATE:Sun Dec 27 20:42:56 ICT 2020
+// @DATE:Sun Dec 27 20:48:04 ICT 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -17,6 +17,16 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:10
+    def hello: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.hello",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hello"})
+        }
+      """
+    )
   
     // @LINE:7
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
@@ -50,7 +60,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:13
+  // @LINE:14
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -58,7 +68,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:14
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
